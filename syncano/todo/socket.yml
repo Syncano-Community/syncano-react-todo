@@ -1,0 +1,60 @@
+name: todo
+description: Todo react redux Socket
+endpoints:
+  addTask:
+    description: Add new task
+    file: scripts/addTask.js
+    parameters:
+      title:
+        type: string
+        description: Task title
+        example: Go for shopping
+      desc:
+        type: string
+        description: Task description
+        example: Buy some milk for breakfast
+      deadline:
+        type: string
+        description: When task should be executed
+        example: '2017-04-05T10:54:00.000Z'
+
+  deleteTask:
+    description: Add new task
+    file: scripts/deleteTask.js
+    parameters:
+      task:
+        type: string
+        description: Task title
+        example: Go for shopping
+
+  getTasks:
+    description: Add new task
+    file: scripts/getTasks.js
+
+  editTask:
+    description: Add new task
+    file: scripts/editTask.js
+    parameters:
+      title:
+        type: string
+        description: Task title
+        example: Go for shopping
+      completed:
+        type: bolean
+        description: Task completed flag
+        example: false
+
+classes:
+  tasks:
+    - name: title
+      type: string
+    - name: description
+      type: text
+    - name: deadline
+      type: datetime
+    - name: completed
+      type: boolean
+hosting:
+  staging:
+    src: ../../build
+    cname: null

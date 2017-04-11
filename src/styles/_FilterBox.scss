@@ -1,0 +1,56 @@
+.filterbox {
+  &:first-of-type {
+    margin-top: 20px;
+  }
+}
+
+.filterbox-title {
+  color: $secondary-color;
+}
+
+.filterbox-list {
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  border: 2px solid $border-color;
+  border-radius: 5px;
+}
+
+.filterbox-list_item {
+  cursor: pointer;
+  border-bottom: 2px solid $border-color;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:last-of-type {
+    border: none;
+  }
+
+  .hexagon-label {
+    margin-right: 10px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+
+      path {
+        fill: transparent;
+        stroke: $border-color;
+        stroke-width: 10;
+        stroke-linecap: butt;
+      }
+    }
+  }
+
+  &.checked {
+    font-weight: 700;
+
+    svg {
+      path {
+        fill: $green
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.main-section {
+  flex: 3;
+  margin-left: 20px;
+}
+
+.list {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+}
+
+.toggle-all {
+  opacity: 1!important;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}

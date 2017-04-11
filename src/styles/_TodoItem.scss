@@ -1,0 +1,59 @@
+h4, p {
+  -webkit-margin-before: 0;
+  padding-top: 0;
+}
+
+.list-item {
+  border-top: 1px solid $border-color;
+}
+
+.list-item_content {
+  display: flex;
+  align-items: center;
+}
+
+.list-item_section {
+  padding-left: 25px;
+}
+
+.list-item_section_gray {
+  color: $primary-color;
+  min-height: 20px;
+  margin-top: 0;
+}
+
+.hexagon {
+  position: relative;
+  cursor: pointer;
+  transition: all 1s;
+
+  svg {
+    padding: 20px;
+    width: 120px;
+    height: 110px;
+
+    path {
+      transition: all 1s;
+      stroke: black;
+    }
+  }
+
+  .fa {
+    transition: all 1s;
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.completed {
+    transform: rotate(360deg);
+  }
+}
+
+.destroy {
+  border-color: $red;
+  color: $red;
+}

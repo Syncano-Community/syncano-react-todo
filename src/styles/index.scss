@@ -1,0 +1,117 @@
+$primary-color: #666;
+$secondary-color: #aeb1b7;
+$border-color: #e1e1e1;
+$red: #E51148;
+$green: #04b26e;
+
+@import 'FilterBox';
+@import 'Header';
+@import 'PageHeader';
+@import 'TodoBox';
+@import 'TodoItem';
+@import 'Sidebar';
+@import 'TodoBox-header';
+
+@import 'TextInput';
+@import 'Loading';
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+}
+
+body {
+  background-color: #f7f8fa;
+  margin: 15px;
+}
+
+button {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+input, button {
+  outline: 0;
+
+  &::-webkit-input-placeholder {
+    color: $secondary-color;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+.app {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.main-container {
+  display: flex;
+  margin: 0 80px;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-2 {
+  flex: 2
+}
+
+.flex-3 {
+  flex: 3
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    margin: 0;
+  }
+  .main-section {
+    margin: 0;
+  }
+  .list-item {
+    padding: 10px 0;
+  }
+  .list-item_section {
+    &.created_at {
+      display: none;
+    }
+  }
+}
+
+
+.octagon {
+  background:transparent;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 8.66em;
+  height: 10em;
+  transform: rotate(-90deg) skewY(30deg);
+
+  & > .octagon-background {
+    width: inherit;
+    height: inherit;
+    transform: skewY(-30deg) rotate(60deg) translate(0);
+    background-size: cover;
+  }
+}
+
+
